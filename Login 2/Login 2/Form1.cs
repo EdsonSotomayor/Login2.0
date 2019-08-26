@@ -42,6 +42,11 @@ namespace Login_2
             if (User.Text == "Juancho" && Pasword.Text=="123tamarindo")
             {
                 MessageBox.Show("Bievenido " + User);
+                this.Hide();
+                Ventana2 CursosVentana = new Ventana2();
+                CursosVentana.Show();
+                this.Visible = false;
+
             }
             else
             {
@@ -61,5 +66,47 @@ namespace Login_2
         {
 
         }
+
+        private void User_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void Pasword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (User.Text == "Juancho" && Pasword.Text == "123tamarindo")
+                {
+                    MessageBox.Show("Bievenido " + User);
+                    this.Hide();
+                    Ventana2 CursosVentana = new Ventana2();
+                    CursosVentana.Show();
+                    this.Visible = false;
+
+                }
+                else
+                {
+                    MessageBox.Show("Usurio o contraseña no valido");
+                    User.Text = "";
+                    Pasword.Text = "";
+                    User.Focus();
+                }
+            }
+
+        }
+
+        private void User_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                Pasword.Focus();
+            }
+    }
     }
 }

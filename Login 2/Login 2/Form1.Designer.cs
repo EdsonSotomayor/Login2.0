@@ -83,6 +83,8 @@
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(305, 20);
             this.User.TabIndex = 3;
+            this.User.TextChanged += new System.EventHandler(this.User_TextChanged);
+            this.User.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.User_KeyPress);
             // 
             // Pasword
             // 
@@ -92,6 +94,7 @@
             this.Pasword.Size = new System.Drawing.Size(305, 20);
             this.Pasword.TabIndex = 4;
             this.Pasword.TextChanged += new System.EventHandler(this.Pasword_TextChanged);
+            this.Pasword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pasword_KeyPress);
             // 
             // Inicio
             // 
@@ -99,9 +102,10 @@
             this.Inicio.Name = "Inicio";
             this.Inicio.Size = new System.Drawing.Size(139, 85);
             this.Inicio.TabIndex = 5;
-            this.Inicio.Text = "&Inicio";
+            this.Inicio.Text = "Inicio";
             this.Inicio.UseVisualStyleBackColor = true;
             this.Inicio.Click += new System.EventHandler(this.Inicio_Click);
+            this.Inicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Inicio_KeyPress);
             // 
             // Salir
             // 
